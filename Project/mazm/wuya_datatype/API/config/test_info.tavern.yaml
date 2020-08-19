@@ -1,0 +1,45 @@
+test_name: 给crm的用户风险等级
+
+stages:
+  - name: 验证该用户没有风险
+    request:
+      url: http://activity-inside.kt.ziroom.com/survey/survey/user-risk
+      method: POST
+      data:    #或者使用json(使用表单的时候)
+        uid: 8aa8e315-8389-4f4c-91af-83d22220757b
+        sign: b2fa98223f94ca233305bed9d1913b8f
+        timestamp: 1592900527
+        appid: 600011
+    response:
+      status_code: 200
+      body:  #多个断言
+        status: 'success'
+        data:
+          risk_rating: '0'  #这里要注意返回字段的类型
+    delay_after: 3   #执行完后3s再执行下一个
+
+---
+
+test_name: 批量查询用户问卷
+
+stages:
+  - name: 批量查询用户问卷
+    request:
+      url: http://activity-inside.kt.ziroom.com/tools/investigation/batch-select?uids=e742fa76-ba4e-49c2-8f0f-8a2c3340d067&sign=423500eb9c04e12fc31e9429f1ef335e&timestamp=1592906040&appid=600011
+      method: GET
+    response:
+      status_code: 200
+      body:
+        status: 'success'
+        #匹配任意返回值
+        error_code: !anyint
+        data:
+          - { uid: e742fa76-ba4e-49c2-8f0f-8a2c3340d067 }  #返回形式是以列表的形式
+    delay_before: 3   #执行这个接口之前停留3s再执行
+
+
+
+
+
+
+

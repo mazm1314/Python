@@ -1,0 +1,33 @@
+
+
+[
+    {
+        "request":
+        {
+            "method":"get",
+            "uri":"/center/anniversary/index",
+            "json":
+            {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMmQ2ZWMxYi0yZTI0LTRjMzItYmIyNy01Nzg1MzUzNDVkOTQiLCJ0eXBlIjo1LCJsZW5ndGgiOjEwMDgwLCJ0b2tlbiI6IjkyNWQyYmMyLWQxZDYtNDc3MS05Y2YyLWUyZWVhYjM5ZmIyMiIsImNyZWF0ZVRpbWUiOjE1ODk5NDA1MDc0MzJ9.Nk8tePWAI_-O_EJ2Y4_zW0C3RuOg9zFtyo1BU3fIX_E",
+            },
+        },
+        "response":
+        {
+          "status": "success",
+          "error_code": 0,
+          "error_message": "",
+          "data": {
+            "city_name": "南京",
+            "times": "0",
+            "lessee_start_date": "2018-08-12",
+            "resblock_name": "良城美景家园",
+            "resblock": "2018年8月,良城美景家园",
+            "longest_time": "2.0",
+            "days": "143",
+            "rent_sum": "1",
+            "lessee_sign_date": "",
+            "days_resblock_name": "良城美景家园"
+            }
+        }
+    }
+]

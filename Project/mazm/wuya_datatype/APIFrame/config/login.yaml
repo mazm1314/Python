@@ -1,0 +1,26 @@
+# 用户登录成功--使用单个API的测试
+
+url: "https://tpassport.ziroom.com/login/v2"
+method: POST
+data: {'phone':'18810911959','password':'a53c9868827ee7df457110549547fbb0'}
+headers: {
+  'Accept': 'application/json',
+  'Client-Version': '6.5.10',
+  'Sys': 'app',
+  'Request-Id': '1327D8F2:1587296579'
+}
+except: success
+
+---
+
+url: "https://tpassport.ziroom.com/login/v2"
+method: POST
+data: {'phone':'18810911959','password':'a53c9868827ee7df457110549547fbb0'}
+headers: {
+  'Accept': 'application/json',
+  'Client-Version': '6.5.10',
+  'Sys': 'app',
+  'Request-Id': '1327D8F2:1587296579'
+}
+except: success
+
